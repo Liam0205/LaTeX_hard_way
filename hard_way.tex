@@ -6,14 +6,25 @@
 \author{Liam Huang}
 \date{\today}
 
+\usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+\setlist{nosep}
 
+\ctexset{section/format += \raggedright}
+
+\newcommand{\cs}{\texttt\textbackslash}
+\newcommand{\meta}[1]{\ensuremath\langle\emph{#1}\ensuremath\rangle}
+\newcommand{\marg}[1]{\texttt{\{}\meta{#1}\texttt{\}}}
+\newcommand{\oarg}[1]{\texttt[\meta{#1}\texttt]}
+\newcommand{\parg}[1]{\texttt(\meta{#1}\texttt)}
 
 \begin{document}
 
-\maketitle
 \frontmatter
-
+\maketitle
+\include{0_preface}
 \mainmatter
 
 \backmatter
