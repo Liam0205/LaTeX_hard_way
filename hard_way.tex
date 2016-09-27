@@ -1,5 +1,5 @@
 %!TEX program = xelatex
-
+% hard_way.tex
 \documentclass[UTF8, a4paper, zihao = -4]{ctexbook}
 
 \title{笨办法学 \LaTeX}
@@ -19,7 +19,7 @@
 
 \ctexset{section/format += \raggedright}
 
-\newcommand{\cs}{\texttt\textbackslash}
+\newcommand{\cs}[1]{\texttt{\textbackslash #1}}
 \newcommand{\meta}[1]{\ensuremath\langle\emph{#1}\ensuremath\rangle}
 \newcommand{\marg}[1]{\texttt{\{}\meta{#1}\texttt{\}}}
 \newcommand{\oarg}[1]{\texttt[\meta{#1}\texttt]}
@@ -35,3 +35,4 @@
 \backmatter
 
 \end{document}
+\endinput
