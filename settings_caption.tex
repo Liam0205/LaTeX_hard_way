@@ -1,0 +1,9 @@
+% settings for caption.sty
+\DeclareCaptionFormat{mylst}{\hrule#1#2#3}
+\captionsetup[lstlisting]{
+  format          = mylst,
+  labelfont       = bf,
+  singlelinecheck = off,
+  labelsep        = space
+}
+\endinput

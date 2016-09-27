@@ -1,0 +1,58 @@
+% settings for listings.sty
+\renewcommand{\lstlistingname}{代码清单}
+\lstdefinestyle{lfonts}{
+  basicstyle   = \footnotesize\ttfamily,
+  stringstyle  = \color{purple},
+  keywordstyle = \color{blue!60!black}\bfseries,
+  commentstyle = \color{olive}\scshape,
+}
+\lstdefinestyle{lnumbers}{
+  numbers     = left,
+  numberstyle = \tiny,
+  numbersep   = 1em,
+  firstnumber = 1,
+  stepnumber  = 1,
+}
+\lstdefinestyle{llayout}{
+  breaklines       = true,
+  tabsize          = 2,
+  columns          = flexible,
+}
+\lstdefinestyle{lgeometry}{
+  xleftmargin      = 20pt,
+  xrightmargin     = 0pt,
+  frame            = tb,
+  framesep         = \fboxsep,
+  framexleftmargin = 20pt,
+}
+\lstdefinestyle{lgeneral}{
+  style = lfonts,
+  style = lnumbers,
+  style = llayout,
+  style = lgeometry,
+}
+\def\beginlstdelim#1#2#3{%
+  \def\endlstdelim{#2\egroup}%
+  \ttfamily#1\bgroup\color{#3}\aftergroup\endlstdelim}
+\lstdefinestyle{ldelims}{
+  moredelim = **[is][\beginlstdelim{\$}{\$}{orange}]{\$}{\$},
+  moredelim = **[is][\beginlstdelim{\{}{\}}{ForestGreen}]{\{}{\}},
+  moredelim = **[is][\beginlstdelim{[}{]}{cyan}]{[}{]},
+}
+% LaTeX lst style
+\lstdefinestyle{lltx}{
+  language = {[LaTeX]TeX},
+  style = lgeneral,
+  style = ldelims,
+  morekeywords = {% LaTeX original commands
+    maketitle,
+    rmfamily, sffamily, ttfamily,
+    itshape, slshape, scshape,
+    mdseries, bfseries, emph,
+    textrm, textsf, texttt,
+    textit, textsl, textsc,
+    textmd, textbf, newcommand, renewcommand, providecommand,
+    cs, meta, marg, oarg, parg
+  }
+}
+\endinput

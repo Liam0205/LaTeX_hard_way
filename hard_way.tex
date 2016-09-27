@@ -11,6 +11,11 @@
 \usepackage[normalem]{ulem}
 \usepackage{enumitem}
 \setlist{nosep}
+\usepackage{caption}
+\input{settings_caption}
+\usepackage[usenames, dvipsnames]{xcolor}
+\usepackage{listings}
+\input{settings_listings}
 
 \ctexset{section/format += \raggedright}
 
@@ -24,9 +29,9 @@
 
 \frontmatter
 \maketitle
-\include{0_preface}
+\include{00_preface}
 \mainmatter
-
+\include{01_first_manuscript}
 \backmatter
 
 \end{document}
