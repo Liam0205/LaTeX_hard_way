@@ -1,6 +1,6 @@
 %!TEX program = xelatex
 % hard_way.tex
-\documentclass[UTF8, a4paper, zihao = -4]{ctexbook}
+\documentclass[UTF8, a4paper, zihao = 5]{ctexbook}
 
 \title{笨办法学 \LaTeX}
 \author{Liam Huang}
@@ -13,17 +13,20 @@
 \setlist{nosep}
 \usepackage{caption}
 \input{settings_caption}
+\usepackage{graphicx}
+\graphicspath{{./pic/}}
 \usepackage[usenames, dvipsnames]{xcolor}
 \usepackage{listings}
 \input{settings_listings}
+\usepackage{hologo}
 
 \ctexset{section/format += \raggedright}
 
 \input{settings_defines}
 
-\includeonly{
-  01_first_manuscript,
-}
+% \includeonly{
+%   01_first_manuscript,
+% }
 
 \begin{document}
 

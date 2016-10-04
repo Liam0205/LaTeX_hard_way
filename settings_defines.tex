@@ -1,7 +1,16 @@
 % settings: defines
+\def\ctexdisableecglue{\xeCJKsetup{CJKecglue}}
 \newcommand{\cs}[1]{\texttt{\textbackslash #1}}
-\newcommand{\meta}[1]{\ensuremath\langle\emph{#1}\ensuremath\rangle}
+\newcommand{\meta}[1]{{%
+  \ctexdisableecglue
+  \ensuremath\langle\emph{#1}\ensuremath\rangle}}
 \newcommand{\marg}[1]{\texttt{\{}\meta{#1}\texttt{\}}}
 \newcommand{\oarg}[1]{\texttt[\meta{#1}\texttt]}
 \newcommand{\parg}[1]{\texttt(\meta{#1}\texttt)}
+
+\newcommand{\env}{\textsf}
+\newcommand{\file}{\textsf}
+
+\newcommand{\XeLaTeX}{\hologo{XeLaTeX}}
+\newcommand{\tl}{\hologo{TeX}~Live}
 \endinput
